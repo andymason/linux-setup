@@ -18,6 +18,13 @@ set tabstop=4
 set shiftwidth=4
 set colorcolumn=80
 set mouse=a
+set lazyredraw
+set magic
+set ignorecase
+set smartcase
+set incsearch
+set backspace=eol,start,indent
+set whichwrap+=<,>,[,]
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -38,7 +45,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomasr/molokai'
-
+Bundle 'bling/vim-airline'
 
 " Map home and end keys
 map <esc>OH <home>
