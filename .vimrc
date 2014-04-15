@@ -1,32 +1,23 @@
+filetype off                  " required!
+syntax on
 
 set nocompatible              " be iMproved
-set shiftwidth=4
-set tabstop=4
-set incsearch
-set ruler
-set ignorecase
-set ttyfast
-set title
-set sm
-set nowrap
-set autowrite
-set smartindent
+set t_Co=256
+set background=dark
+set number
 set autoindent
+set smartindent
+set nowrap
+set incsearch
+set showmatch
 set expandtab
+set showmode
+set smartcase
+set ruler
+set tabstop=4
+set shiftwidth=4
+set colorcolumn=80
 set mouse=a
-
-" Map home and end keys
-map <esc>OH <home>
-cmap <esc>OH <home>
-imap <esc>OH <home>
-map <esc>OF <end>
-cmap <esc>OF <end>
-imap <esc>OF <end>
-
-" Unindent
-imap <S-Tab> <C-o><<
-
-filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -39,30 +30,43 @@ Bundle 'gmarik/vundle'
 "
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'pangloss/vim-javascript'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'scrooloose/syntastic'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'tomasr/molokai'
+
+
+" Map home and end keys
+map <esc>OH <home>
+cmap <esc>OH <home>
+imap <esc>OH <home>
+map <esc>OF <end>
+cmap <esc>OF <end>
+imap <esc>OF <end>
+
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 colorscheme jellybeans 
 
+
+" vim-scripts repos
+" Git repos on your local machine (i.e. when working on your own plugin)
+
 filetype plugin indent on     " required!
 
-" NERDTree options
-" autocmd vimenter * NERDTree
+" Close NerdTree if it's the only window open
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-
-" Strip white space
+" Trim white space on save
 autocmd BufWritePre *.py :%s/\s\+$//e
 
-set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
-set number
-
+"
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install (update) bundles
