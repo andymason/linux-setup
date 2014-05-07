@@ -117,4 +117,7 @@ source ~/.git-completion.sh
 #export TERM="xterm-256color"
 export TERM="screen-256color"
 
+# For tmux to assume 256 colours
+alias tmux='tmux -2'
+
 
