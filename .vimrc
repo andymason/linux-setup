@@ -25,6 +25,8 @@ set smartcase
 set incsearch
 set backspace=eol,start,indent
 set whichwrap+=<,>,[,]
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -58,7 +60,7 @@ imap <esc>OF <end>
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-colorscheme jellybeans 
+colorscheme elflord 
 
 
 " vim-scripts repos
