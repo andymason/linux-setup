@@ -28,7 +28,7 @@ set whichwrap+=<,>,[,]
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " let Vundle manage Vundle
