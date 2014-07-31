@@ -64,7 +64,7 @@ vmap <S-TAB> <gv
 imap <S-TAB> <C-d>
 
 colorscheme elflord 
-
+highlight ColorColumn ctermbg=235
 
 " vim-scripts repos
 " Git repos on your local machine (i.e. when working on your own plugin)
