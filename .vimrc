@@ -7,7 +7,9 @@ set background=dark
 set number
 set autoindent
 set smartindent
-set nowrap
+set wrap
+set linebreak
+set nolist
 set incsearch
 set showmatch
 set expandtab
@@ -28,7 +30,7 @@ set whichwrap+=<,>,[,]
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -45,7 +47,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'scrooloose/syntastic'
-Bundle 'nanotech/jellybeans.vim'
 Bundle 'tomasr/molokai'
 Bundle 'bling/vim-airline'
 
@@ -57,8 +58,10 @@ map <esc>OF <end>
 cmap <esc>OF <end>
 imap <esc>OF <end>
 
-vmap <Tab> >gv
-vmap <S-Tab> <gv
+" Map indent and un-indent to shift tab
+vmap <TAB> >gv
+vmap <S-TAB> <gv
+imap <S-TAB> <C-d>
 
 colorscheme elflord 
 
