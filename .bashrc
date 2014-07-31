@@ -80,12 +80,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias tmux='tmux -2'
+# some more ls aliases'
+alias la='ls -lha'
+alias clipboard='xclip -sel clip'
 
+# For tmux to assume 256 colours
+alias tmux='tmux -2'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -116,8 +116,5 @@ source ~/.git-completion.sh
 # 256 colour terminal
 #export TERM="xterm-256color"
 export TERM="screen-256color"
-
-# For tmux to assume 256 colours
-alias tmux='tmux -2'
 
 
