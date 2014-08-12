@@ -87,3 +87,13 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+
+
+" Setup JS validation
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_jump = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_error_symbol = "!!"
+let g:syntastic_check_on_open = 1
