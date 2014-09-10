@@ -49,6 +49,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomasr/molokai'
 Bundle 'bling/vim-airline'
+Bundle 'valloric/MatchTagAlways'
 
 " Map home and end keys
 map <esc>OH <home>
