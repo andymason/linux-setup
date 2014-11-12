@@ -29,6 +29,8 @@ fi
 alias la='ls -lha'
 alias clipboard='xclip -sel clip'
 alias webpage='w3m -cols 80 -O ascii -r -M -s -dump'
+alias pgrep="ps -A | grep"
+
 # For tmux to assume 256 colours
 alias tmux='tmux -2'
 
