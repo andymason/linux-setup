@@ -38,3 +38,4 @@ source ~/.git-completion.sh
 
 # 256 colour terminal
 export TERM="screen-256color"
+export EDITOR="vim"
