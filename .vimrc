@@ -89,9 +89,9 @@ cmap <esc>OF <end>
 imap <esc>OF <end>
 
 " Map indent and un-indent to shift tab
-" vmap <TAB> >gv
-" vmap <S-TAB> <gv
-" imap <S-TAB> <C-d>
+nmap <S-Tab> <<
+" for insert mode
+imap <S-Tab> <Esc><<i
 
 colorscheme elflord 
 highlight ColorColumn ctermbg=235
