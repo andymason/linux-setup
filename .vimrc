@@ -63,7 +63,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles here:
-"
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -72,12 +71,14 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'scrooloose/syntastic'
-Bundle 'tomasr/molokai'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'valloric/MatchTagAlways'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'ervandew/supertab'
+Bundle 'matze/vim-move'
+
+let g:move_key_modifier = 'C'
 
 " Map home and end keys
 map <esc>OH <home>
@@ -88,13 +89,14 @@ cmap <esc>OF <end>
 imap <esc>OF <end>
 
 " Map indent and un-indent to shift tab
-vmap <TAB> >gv
-vmap <S-TAB> <gv
-imap <S-TAB> <C-d>
+" vmap <TAB> >gv
+" vmap <S-TAB> <gv
+" imap <S-TAB> <C-d>
 
 colorscheme elflord 
 highlight ColorColumn ctermbg=235
-
+highlight LineNr ctermfg=darkgrey
+ 
 " vim-scripts repos
 " Git repos on your local machine (i.e. when working on your own plugin)
 
