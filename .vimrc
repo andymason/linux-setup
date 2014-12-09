@@ -95,6 +95,7 @@ imap <S-Tab> <Esc><<i
 
 colorscheme elflord 
 highlight ColorColumn ctermbg=235
+highlight Pmenu ctermbg=2
 highlight LineNr ctermfg=darkgrey
  
 " vim-scripts repos
