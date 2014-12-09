@@ -100,8 +100,6 @@ highlight LineNr ctermfg=darkgrey
 " vim-scripts repos
 " Git repos on your local machine (i.e. when working on your own plugin)
 
-filetype plugin indent on     " required!
-
 " Close NerdTree if it's the only window open
 map <C-n> :NERDTreeToggle<CR>
 " NERDTree
