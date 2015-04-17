@@ -25,6 +25,7 @@ set magic
 set ignorecase
 set smartcase
 set incsearch
+set omnifunc=syntaxcomplete#Complete
 
 " don't wait ESC-sequences
 set ttimeoutlen=50
@@ -37,6 +38,9 @@ set autoread
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,[,]
+
+" Ignore folders and files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/bower_components/*,*/.git/*,*/.sass-cache/*
 
 " Backup and swap settings
 " ------------------------
@@ -89,8 +93,6 @@ cmap <esc>OF <end>
 imap <esc>OF <end>
 
 " Map indent and un-indent to shift tab
-nmap <S-Tab> <<
-" for insert mode
 imap <S-Tab> <Esc><<i
 
 colorscheme elflord 
