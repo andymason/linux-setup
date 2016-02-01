@@ -1,4 +1,4 @@
-filetype off                  " required!
+filetype plugin on                  " required!
 syntax on
 
 set nocompatible              " be iMproved
@@ -59,7 +59,7 @@ set fileencodings=utf-8,windows-1251,iso-8859-15,koi8
 set title
 
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -70,17 +70,19 @@ Bundle 'gmarik/vundle'
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'godlygeek/tabular'
-Bundle 'valloric/MatchTagAlways'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'ervandew/supertab'
 Bundle 'matze/vim-move'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Yggdroot/indentLine'
+
 
 let g:move_key_modifier = 'C'
 
@@ -106,7 +108,7 @@ highlight LineNr ctermfg=darkgrey
 " Close NerdTree if it's the only window open
 map <C-n> :NERDTreeToggle<CR>
 " NERDTree
-let g:NERDTreeWinSize           = 40
+let g:NERDTreeWinSize           = 34 
 let g:NERDTreeChristmasTree     = 1
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeQuitOnOpen        = 0
@@ -152,6 +154,7 @@ map  N <Plug>(easymotion-prev)
 
 " Let subertab look for filenames
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
 
 "
 " Brief help
@@ -165,14 +168,33 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 " Setup JS validation
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-" let g:syntastic_auto_jump = 1
+" let g:syntastic_javascript_checkers = ['jslint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+"
+" let g:syntastic_enable_signs=1
+" let g:syntastic_enable_balloons = 1
+" let g:syntastic_auto_loc_list=1
+" " let g:syntastic_auto_jump = 1
+" " let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_error_symbol = "!!"
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_enable_highlighting    = 1
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['python', 'javascript'],
+                            \ 'passive_filetypes': [] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_error_symbol = "!!"
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
-let g:syntastic_enable_highlighting    = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
 
 
 " CSS lint options
