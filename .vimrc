@@ -58,6 +58,12 @@ set fileencodings=utf-8,windows-1251,iso-8859-15,koi8
 " Show name of buffer in terminal title
 set title
 
+" Toggle spell checking on and off with `,s`
+let mapleader = ","
+nmap <silent> <leader>s :set spell!<CR>
+
+" Set region to British English
+set spelllang=en_gb
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
@@ -168,7 +174,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 " Setup JS validation
-" let g:syntastic_javascript_checkers = ['jslint']
+" let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
