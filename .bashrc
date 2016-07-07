@@ -39,3 +39,7 @@ source ~/.git-completion.sh
 # 256 colour terminal
 export TERM="screen-256color"
 export EDITOR="vim"
+
+# GPU video decoding for INTEL
+# Info: https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Verification
+export LIBVA_DRIVER_NAME=i965
